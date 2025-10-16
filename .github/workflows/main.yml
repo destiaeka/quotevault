@@ -30,8 +30,6 @@ jobs:
         port: ${{ secrets.VPS_PORT }}
         script: |    
           cd /var/www/quotevault
-          chmod +x /var/www/docker-app/wait.sh
-          bash /var/www/docker-app/wait.sh
           docker-compose down -v
           docker-compose up -d
           
